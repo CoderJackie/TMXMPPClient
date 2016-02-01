@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D30AE07C1C5F6FDF00A5B077 /* TMRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30AE07B1C5F6FDF00A5B077 /* TMRegisterViewController.m */; };
+		D30AE07E1C5F6FF800A5B077 /* TMRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30AE07D1C5F6FF800A5B077 /* TMRegisterViewController.xib */; };
+		D30AE0811C5F85A000A5B077 /* TMXMPPRegisteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D30AE0801C5F85A000A5B077 /* TMXMPPRegisteManager.m */; };
 		D3F09A681C5D956200E08574 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F09A671C5D956200E08574 /* main.m */; };
 		D3F09A6B1C5D956200E08574 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F09A6A1C5D956200E08574 /* AppDelegate.m */; };
 		D3F09A6E1C5D956200E08574 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F09A6D1C5D956200E08574 /* ViewController.m */; };
@@ -183,6 +186,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D30AE07A1C5F6FDF00A5B077 /* TMRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMRegisterViewController.h; path = Chat/LoginModules/ResigterModules/TMRegisterViewController.h; sourceTree = "<group>"; };
+		D30AE07B1C5F6FDF00A5B077 /* TMRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMRegisterViewController.m; path = Chat/LoginModules/ResigterModules/TMRegisterViewController.m; sourceTree = "<group>"; };
+		D30AE07D1C5F6FF800A5B077 /* TMRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TMRegisterViewController.xib; path = Chat/LoginModules/ResigterModules/TMRegisterViewController.xib; sourceTree = "<group>"; };
+		D30AE07F1C5F85A000A5B077 /* TMXMPPRegisteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPRegisteManager.h; path = Chat/LoginModules/ResigterModules/TMXMPPRegisteManager.h; sourceTree = "<group>"; };
+		D30AE0801C5F85A000A5B077 /* TMXMPPRegisteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPRegisteManager.m; path = Chat/LoginModules/ResigterModules/TMXMPPRegisteManager.m; sourceTree = "<group>"; };
+		D30AE0821C5F86C000A5B077 /* TMXMPPDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMXMPPDef.h; path = Chat/TMXMPPDef.h; sourceTree = "<group>"; };
+		D30AE0831C5F882C00A5B077 /* TMXMPPRegisteDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMXMPPRegisteDelegate.h; path = Chat/LoginModules/ResigterModules/TMXMPPRegisteDelegate.h; sourceTree = "<group>"; };
 		D3F09A631C5D956200E08574 /* TMXMPPClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMXMPPClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F09A671C5D956200E08574 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D3F09A691C5D956200E08574 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -501,6 +511,7 @@
 		D3F09CA71C5D9B8600E08574 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = avatar.jpg; path = Resource/Images/avatar.jpg; sourceTree = "<group>"; };
 		D3F09CA91C5D9FBA00E08574 /* TMXMPPLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPLoginManager.h; path = Chat/LoginModules/TMXMPPLoginManager.h; sourceTree = "<group>"; };
 		D3F09CAA1C5D9FBA00E08574 /* TMXMPPLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPLoginManager.m; path = Chat/LoginModules/TMXMPPLoginManager.m; sourceTree = "<group>"; };
+		D3F09CAC1C5DE81900E08574 /* TMXMPPLoginDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMXMPPLoginDelegate.h; path = Chat/LoginModules/TMXMPPLoginDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -531,6 +542,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3AF9ED51C5F6F4A00CEB54A /* RegisterModules */ = {
+			isa = PBXGroup;
+			children = (
+				D30AE07A1C5F6FDF00A5B077 /* TMRegisterViewController.h */,
+				D30AE07B1C5F6FDF00A5B077 /* TMRegisterViewController.m */,
+				D30AE07D1C5F6FF800A5B077 /* TMRegisterViewController.xib */,
+				D30AE0831C5F882C00A5B077 /* TMXMPPRegisteDelegate.h */,
+				D30AE07F1C5F85A000A5B077 /* TMXMPPRegisteManager.h */,
+				D30AE0801C5F85A000A5B077 /* TMXMPPRegisteManager.m */,
+			);
+			name = RegisterModules;
+			sourceTree = "<group>";
+		};
 		D3F09A5A1C5D956200E08574 = {
 			isa = PBXGroup;
 			children = (
@@ -1493,6 +1517,7 @@
 			isa = PBXGroup;
 			children = (
 				D3F09CA01C5D974200E08574 /* LoginModules */,
+				D30AE0821C5F86C000A5B077 /* TMXMPPDef.h */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -1500,9 +1525,11 @@
 		D3F09CA01C5D974200E08574 /* LoginModules */ = {
 			isa = PBXGroup;
 			children = (
+				D3AF9ED51C5F6F4A00CEB54A /* RegisterModules */,
 				D3F09CA11C5D978200E08574 /* TMLoginViewController.h */,
 				D3F09CA21C5D978200E08574 /* TMLoginViewController.m */,
 				D3F09CA31C5D978200E08574 /* TMLoginViewController.xib */,
+				D3F09CAC1C5DE81900E08574 /* TMXMPPLoginDelegate.h */,
 				D3F09CA91C5D9FBA00E08574 /* TMXMPPLoginManager.h */,
 				D3F09CAA1C5D9FBA00E08574 /* TMXMPPLoginManager.m */,
 			);
@@ -1626,6 +1653,7 @@
 				D3F09CA81C5D9B8600E08574 /* avatar.jpg in Resources */,
 				D3F09C0C1C5D963300E08574 /* Info.plist in Resources */,
 				D3F09C851C5D963300E08574 /* build-libidn.sh in Resources */,
+				D30AE07E1C5F6FF800A5B077 /* TMRegisterViewController.xib in Resources */,
 				D3F09A761C5D956200E08574 /* LaunchScreen.storyboard in Resources */,
 				D3F09A731C5D956200E08574 /* Assets.xcassets in Resources */,
 				D3F09A711C5D956200E08574 /* Main.storyboard in Resources */,
@@ -1697,6 +1725,7 @@
 				D3F09C2F1C5D963300E08574 /* XMPPRoomMessageCoreDataStorageObject.m in Sources */,
 				D3F09C951C5D963300E08574 /* RFImageToDataTransformer.m in Sources */,
 				D3F09C7C1C5D963300E08574 /* DDTTYLogger.m in Sources */,
+				D30AE07C1C5F6FDF00A5B077 /* TMRegisterViewController.m in Sources */,
 				D3F09C3B1C5D963300E08574 /* XMPPvCard.xcdatamodeld in Sources */,
 				D3F09C571C5D963300E08574 /* XMPPCapabilitiesCoreDataStorage.m in Sources */,
 				D3F09C1E1C5D963300E08574 /* XMPPResourceCoreDataStorageObject.m in Sources */,
@@ -1761,6 +1790,7 @@
 				D3F09C5A1C5D963300E08574 /* XMPPCapabilities.m in Sources */,
 				D3F09C3C1C5D963300E08574 /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				D3F09C331C5D963300E08574 /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
+				D30AE0811C5F85A000A5B077 /* TMXMPPRegisteManager.m in Sources */,
 				D3F09C811C5D963300E08574 /* NSString+DDXML.m in Sources */,
 				D3F09C781C5D963300E08574 /* DDAbstractDatabaseLogger.m in Sources */,
 				D3F09C771C5D963300E08574 /* GCDAsyncSocket.m in Sources */,
@@ -2031,6 +2061,7 @@
 				D3F09A921C5D956200E08574 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3F09A931C5D956200E08574 /* Build configuration list for PBXNativeTarget "TMXMPPClientTests" */ = {
 			isa = XCConfigurationList;
@@ -2039,6 +2070,7 @@
 				D3F09A951C5D956200E08574 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D3F09A961C5D956200E08574 /* Build configuration list for PBXNativeTarget "TMXMPPClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -2047,6 +2079,7 @@
 				D3F09A981C5D956200E08574 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

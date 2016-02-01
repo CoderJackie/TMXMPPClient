@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+//处理XMPP登录回调
+#import "TMXMPPLoginDelegate.h"
+
 //处理XMPP相关数据
 #import "XMPPFramework.h"
 
 @interface TMXMPPLoginManager : NSObject
-+ (instancetype)sharedInstance;
+
+@property (nonatomic, strong) id<TMXMPPLoginDelegate> loginDelegate;
 
 - (void)connectXMPPServer:(NSString *)userName password:(NSString *)password;
 @end

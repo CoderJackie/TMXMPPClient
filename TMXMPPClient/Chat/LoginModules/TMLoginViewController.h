@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "TMXMPPLoginManager.h"
+
 @interface TMLoginViewController : UIViewController
+
+@property (nonatomic, strong) UINavigationController *navController;
+@property (nonatomic, weak) id<TMXMPPLoginDelegate>delegate;
 
 @end

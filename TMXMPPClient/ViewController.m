@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+    self.title = @"登录";
     [self initLoginViewController];
     [self.view addSubview:self.loginViewController.view];
 }
@@ -27,6 +27,7 @@
 - (void)initLoginViewController {
     self.loginViewController = [[TMLoginViewController alloc] initWithNibName:@"TMLoginViewController" bundle:nil];
     self.loginViewController.view.frame = [UIScreen mainScreen].bounds;
+    self.loginViewController.navController = self.navigationController;
 }
 
 - (void)didReceiveMemoryWarning {
