@@ -10,6 +10,8 @@
 		D30AE07C1C5F6FDF00A5B077 /* TMRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30AE07B1C5F6FDF00A5B077 /* TMRegisterViewController.m */; };
 		D30AE07E1C5F6FF800A5B077 /* TMRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30AE07D1C5F6FF800A5B077 /* TMRegisterViewController.xib */; };
 		D30AE0811C5F85A000A5B077 /* TMXMPPRegisteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D30AE0801C5F85A000A5B077 /* TMXMPPRegisteManager.m */; };
+		D3C803921C621D26004A9F80 /* TMXMPPChatListener.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C803911C621D26004A9F80 /* TMXMPPChatListener.m */; };
+		D3C803961C621D5A004A9F80 /* TMXMPPPacketFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C803951C621D5A004A9F80 /* TMXMPPPacketFactory.m */; };
 		D3F09A681C5D956200E08574 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F09A671C5D956200E08574 /* main.m */; };
 		D3F09A6B1C5D956200E08574 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F09A6A1C5D956200E08574 /* AppDelegate.m */; };
 		D3F09A6E1C5D956200E08574 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F09A6D1C5D956200E08574 /* ViewController.m */; };
@@ -193,6 +195,10 @@
 		D30AE0801C5F85A000A5B077 /* TMXMPPRegisteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPRegisteManager.m; path = Chat/LoginModules/ResigterModules/TMXMPPRegisteManager.m; sourceTree = "<group>"; };
 		D30AE0821C5F86C000A5B077 /* TMXMPPDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMXMPPDef.h; path = Chat/TMXMPPDef.h; sourceTree = "<group>"; };
 		D30AE0831C5F882C00A5B077 /* TMXMPPRegisteDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMXMPPRegisteDelegate.h; path = Chat/LoginModules/ResigterModules/TMXMPPRegisteDelegate.h; sourceTree = "<group>"; };
+		D3C803901C621D26004A9F80 /* TMXMPPChatListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPChatListener.h; path = Chat/ChatModules/XMPPListener/TMXMPPChatListener.h; sourceTree = "<group>"; };
+		D3C803911C621D26004A9F80 /* TMXMPPChatListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPChatListener.m; path = Chat/ChatModules/XMPPListener/TMXMPPChatListener.m; sourceTree = "<group>"; };
+		D3C803941C621D5A004A9F80 /* TMXMPPPacketFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPPacketFactory.h; path = Chat/ChatModules/XMPPPacketFactory/TMXMPPPacketFactory.h; sourceTree = "<group>"; };
+		D3C803951C621D5A004A9F80 /* TMXMPPPacketFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPPacketFactory.m; path = Chat/ChatModules/XMPPPacketFactory/TMXMPPPacketFactory.m; sourceTree = "<group>"; };
 		D3F09A631C5D956200E08574 /* TMXMPPClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMXMPPClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F09A671C5D956200E08574 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D3F09A691C5D956200E08574 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -553,6 +559,33 @@
 				D30AE0801C5F85A000A5B077 /* TMXMPPRegisteManager.m */,
 			);
 			name = RegisterModules;
+			sourceTree = "<group>";
+		};
+		D3C8038B1C62193B004A9F80 /* ChatModules */ = {
+			isa = PBXGroup;
+			children = (
+				D3C803931C621D31004A9F80 /* XMPPPacketFactory */,
+				D3C8038F1C621CF8004A9F80 /* XMPPListener */,
+			);
+			name = ChatModules;
+			sourceTree = "<group>";
+		};
+		D3C8038F1C621CF8004A9F80 /* XMPPListener */ = {
+			isa = PBXGroup;
+			children = (
+				D3C803901C621D26004A9F80 /* TMXMPPChatListener.h */,
+				D3C803911C621D26004A9F80 /* TMXMPPChatListener.m */,
+			);
+			name = XMPPListener;
+			sourceTree = "<group>";
+		};
+		D3C803931C621D31004A9F80 /* XMPPPacketFactory */ = {
+			isa = PBXGroup;
+			children = (
+				D3C803941C621D5A004A9F80 /* TMXMPPPacketFactory.h */,
+				D3C803951C621D5A004A9F80 /* TMXMPPPacketFactory.m */,
+			);
+			name = XMPPPacketFactory;
 			sourceTree = "<group>";
 		};
 		D3F09A5A1C5D956200E08574 = {
@@ -1516,6 +1549,7 @@
 		D3F09C9F1C5D972900E08574 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				D3C8038B1C62193B004A9F80 /* ChatModules */,
 				D3F09CA01C5D974200E08574 /* LoginModules */,
 				D30AE0821C5F86C000A5B077 /* TMXMPPDef.h */,
 			);
@@ -1710,6 +1744,7 @@
 				D3F09C2D1C5D963300E08574 /* XMPPRoom.xcdatamodeld in Sources */,
 				D3F09C171C5D963300E08574 /* XMPPFileTransfer.m in Sources */,
 				D3F09C1C1C5D963300E08574 /* XMPPReconnect.m in Sources */,
+				D3C803921C621D26004A9F80 /* TMXMPPChatListener.m in Sources */,
 				D3F09C1F1C5D963300E08574 /* XMPPRoster.xcdatamodel in Sources */,
 				D3F09CA41C5D978200E08574 /* TMLoginViewController.m in Sources */,
 				D3F09C971C5D963300E08574 /* XMPPSRVResolver.m in Sources */,
@@ -1809,6 +1844,7 @@
 				D3F09C201C5D963300E08574 /* XMPPRosterCoreDataStorage.m in Sources */,
 				D3F09C121C5D963300E08574 /* XMPPSCRAMSHA1Authentication.m in Sources */,
 				D3F09C821C5D963300E08574 /* DDXMLDocument.m in Sources */,
+				D3C803961C621D5A004A9F80 /* TMXMPPPacketFactory.m in Sources */,
 				D3F09C991C5D963300E08574 /* XMPPTimer.m in Sources */,
 				D3F09C941C5D963300E08574 /* GCDMulticastDelegate.m in Sources */,
 				D3F09C901C5D963300E08574 /* XMPPParser.m in Sources */,

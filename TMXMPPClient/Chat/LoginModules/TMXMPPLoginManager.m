@@ -10,10 +10,13 @@
 
 #import "TMXMPPDef.h"
 
+#import "TMXMPPChatListener.h"
+
 @interface TMXMPPLoginManager ()<XMPPStreamDelegate, XMPPReconnectDelegate>
 
 @property (nonatomic, strong) XMPPStream *loginXmppStream;
 @property (nonatomic, strong) XMPPReconnect *loginReconnectManager;
+@property (nonatomic, strong) XMPPRoster *xmppRoster;
 
 @property (nonatomic, copy) NSString *userName;
 @property (nonatomic, copy) NSString *password;
@@ -34,13 +37,17 @@
 
 - (void)initXMPPStream {
     self.loginXmppStream = [[XMPPStream alloc] init];
+    [TMXMPPChatListener sharedInstance].xmppStream = self.loginXmppStream;
+    
     [self.loginXmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    [self.loginXmppStream addDelegate:[TMXMPPChatListener sharedInstance] delegateQueue:dispatch_get_main_queue()];
 }
 
 - (void)initXMPPReconnect {
     self.loginReconnectManager = [[XMPPReconnect alloc] init];
     [self.loginReconnectManager activate:self.loginXmppStream];
     // You can also optionally add delegates to the module.
+    [self.loginReconnectManager addDelegate:[TMXMPPChatListener sharedInstance] delegateQueue:dispatch_get_main_queue()];
     [self.loginReconnectManager addDelegate:self delegateQueue:dispatch_get_main_queue()];
 }
 
