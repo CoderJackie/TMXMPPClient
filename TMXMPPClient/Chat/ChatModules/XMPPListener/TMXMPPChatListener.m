@@ -10,6 +10,9 @@
 
 #import "TMXMPPPacketFactory.h"
 
+//内存存储联系人数据
+#import "TMXMPPRosterDatasource.h"
+
 @interface TMXMPPChatListener ()<XMPPStreamDelegate>
 
 @property (nonatomic, strong) XMPPReconnect *xmppReconnectManager;
@@ -34,7 +37,24 @@
 
 #pragma mark -- xmppstream delegate
 - (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq {
-    
+    //result报文
+    if ([iq isResultIQ]) {
+        NSXMLElement *queryElement = [iq childElement];
+        NSArray<NSXMLElement *> *itemArray = [queryElement elementsForName:@"item"];
+        
+        [itemArray enumerateObjectsUsingBlock:^(DDXMLElement *obj, NSUInteger idx, BOOL *stop) {
+            NSString *jidName = [obj attributeForName:@"jid"].stringValue;
+            NSString *name = [obj attributeForName:@"name"].stringValue;
+//            NSString *subscription = [obj attributeForName:@"subscription"].name;
+            TMRosterModel *model = [[TMRosterModel alloc] initWithJidName:jidName nickName:name];
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"jidName like %@", model.jidName];
+            TMXMPPRosterDatasource *dataSource = [TMXMPPRosterDatasource sharedInstance];
+            if (![[dataSource datasource] filteredArrayUsingPredicate:predicate].count) {
+                [dataSource addObject:model];
+            }
+        }];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"Notification_Center_RosterChanged" object:nil];
+    }
     return YES;
 }
 

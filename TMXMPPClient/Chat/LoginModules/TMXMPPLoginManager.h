@@ -18,5 +18,5 @@
 
 @property (nonatomic, strong) id<TMXMPPLoginDelegate> loginDelegate;
 
-- (void)connectXMPPServer:(NSString *)userName password:(NSString *)password;
+- (void)connectXMPPServer:(NSString *)userName password:(NSString *)password loginDelegate:(id<TMXMPPLoginDelegate>)loginDelegate;
 @end

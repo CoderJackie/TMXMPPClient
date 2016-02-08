@@ -57,9 +57,10 @@
 }
 
 #pragma mark -- connect xmpp method for login viewController
-- (void)connectXMPPServer:(NSString *)userName password:(NSString *)password {
+- (void)connectXMPPServer:(NSString *)userName password:(NSString *)password loginDelegate:(id<TMXMPPLoginDelegate>)loginDelegate {
     self.userName = userName;
     self.password = password;
+    self.loginDelegate = loginDelegate;
     
     NSString *myJid = [NSString stringWithFormat:@"%@%@%@", userName, CONNECT_IDENTIFIER, HOST_NAME];
     self.loginXmppStream.myJID = [XMPPJID jidWithString:myJid];

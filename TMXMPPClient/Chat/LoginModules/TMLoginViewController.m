@@ -9,8 +9,10 @@
 #import "TMLoginViewController.h"
 
 #import "TMXMPPLoginManager.h"
-
+//注册模块
 #import "TMRegisterViewController.h"
+
+#import "TMXMPPRosterController.h"
 
 @interface TMLoginViewController ()<TMXMPPLoginDelegate>
 
@@ -52,7 +54,7 @@
     NSString *userName = self.userNameTextField.text;
     NSString *password = self.passwordTextField.text;
     NSLog(@"%@ %@", userName, password);
-    [self.loginXmppManager connectXMPPServer:userName password:password];
+    [self.loginXmppManager connectXMPPServer:userName password:password loginDelegate:self];
 }
 
 - (IBAction)registerNewUser:(id)sender {
@@ -63,7 +65,8 @@
 
 #pragma mark -- xmpp login delegate
 - (void)loginXMPPDidAuthenticate {
-    
+    TMXMPPRosterController *rosterController = [[TMXMPPRosterController alloc] initWithStyle:UITableViewStylePlain];
+    [self.navController pushViewController:rosterController animated:YES];
 }
 
 - (void)loginXMPPConnectDidTimeout {

@@ -10,6 +10,14 @@
 		D30AE07C1C5F6FDF00A5B077 /* TMRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30AE07B1C5F6FDF00A5B077 /* TMRegisterViewController.m */; };
 		D30AE07E1C5F6FF800A5B077 /* TMRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30AE07D1C5F6FF800A5B077 /* TMRegisterViewController.xib */; };
 		D30AE0811C5F85A000A5B077 /* TMXMPPRegisteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D30AE0801C5F85A000A5B077 /* TMXMPPRegisteManager.m */; };
+		D33494131C64E4A2008A1C5E /* TMRosterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D33494121C64E4A2008A1C5E /* TMRosterModel.m */; };
+		D3A97C521C660BFB003B0EB0 /* TMXMPPRosterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A97C511C660BFB003B0EB0 /* TMXMPPRosterController.m */; };
+		D3A97C551C660C27003B0EB0 /* TMXMPPRosterDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A97C541C660C26003B0EB0 /* TMXMPPRosterDatasource.m */; };
+		D3A97C591C6751BC003B0EB0 /* TMXMPPChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A97C581C6751BC003B0EB0 /* TMXMPPChatViewController.m */; };
+		D3A97C621C684D84003B0EB0 /* TMXMPPRosterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A97C611C684D84003B0EB0 /* TMXMPPRosterViewCell.m */; };
+		D3A97C641C684D9F003B0EB0 /* TMXMPPRosterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A97C631C684D9F003B0EB0 /* TMXMPPRosterViewCell.xib */; };
+		D3A97C661C685317003B0EB0 /* TMMessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A97C651C685317003B0EB0 /* TMMessageKit.framework */; };
+		D3A97C671C685317003B0EB0 /* TMMessageKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3A97C651C685317003B0EB0 /* TMMessageKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3C803921C621D26004A9F80 /* TMXMPPChatListener.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C803911C621D26004A9F80 /* TMXMPPChatListener.m */; };
 		D3C803961C621D5A004A9F80 /* TMXMPPPacketFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C803951C621D5A004A9F80 /* TMXMPPPacketFactory.m */; };
 		D3F09A681C5D956200E08574 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F09A671C5D956200E08574 /* main.m */; };
@@ -187,6 +195,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D3A97C5D1C6751E7003B0EB0 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D3A97C671C685317003B0EB0 /* TMMessageKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		D30AE07A1C5F6FDF00A5B077 /* TMRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMRegisterViewController.h; path = Chat/LoginModules/ResigterModules/TMRegisterViewController.h; sourceTree = "<group>"; };
 		D30AE07B1C5F6FDF00A5B077 /* TMRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMRegisterViewController.m; path = Chat/LoginModules/ResigterModules/TMRegisterViewController.m; sourceTree = "<group>"; };
@@ -195,6 +217,18 @@
 		D30AE0801C5F85A000A5B077 /* TMXMPPRegisteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPRegisteManager.m; path = Chat/LoginModules/ResigterModules/TMXMPPRegisteManager.m; sourceTree = "<group>"; };
 		D30AE0821C5F86C000A5B077 /* TMXMPPDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMXMPPDef.h; path = Chat/TMXMPPDef.h; sourceTree = "<group>"; };
 		D30AE0831C5F882C00A5B077 /* TMXMPPRegisteDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMXMPPRegisteDelegate.h; path = Chat/LoginModules/ResigterModules/TMXMPPRegisteDelegate.h; sourceTree = "<group>"; };
+		D33494111C64E4A2008A1C5E /* TMRosterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMRosterModel.h; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterModel/TMRosterModel.h; sourceTree = "<group>"; };
+		D33494121C64E4A2008A1C5E /* TMRosterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMRosterModel.m; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterModel/TMRosterModel.m; sourceTree = "<group>"; };
+		D3A97C501C660BFB003B0EB0 /* TMXMPPRosterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPRosterController.h; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterController/TMXMPPRosterController.h; sourceTree = "<group>"; };
+		D3A97C511C660BFB003B0EB0 /* TMXMPPRosterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPRosterController.m; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterController/TMXMPPRosterController.m; sourceTree = "<group>"; };
+		D3A97C531C660C26003B0EB0 /* TMXMPPRosterDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPRosterDatasource.h; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterController/XMPPRosterDatasource/TMXMPPRosterDatasource.h; sourceTree = "<group>"; };
+		D3A97C541C660C26003B0EB0 /* TMXMPPRosterDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPRosterDatasource.m; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterController/XMPPRosterDatasource/TMXMPPRosterDatasource.m; sourceTree = "<group>"; };
+		D3A97C571C6751BC003B0EB0 /* TMXMPPChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPChatViewController.h; path = Chat/ChatModules/ChatViewController/TMXMPPChatViewController.h; sourceTree = "<group>"; };
+		D3A97C581C6751BC003B0EB0 /* TMXMPPChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPChatViewController.m; path = Chat/ChatModules/ChatViewController/TMXMPPChatViewController.m; sourceTree = "<group>"; };
+		D3A97C601C684D84003B0EB0 /* TMXMPPRosterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPRosterViewCell.h; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterView/TMXMPPRosterViewCell.h; sourceTree = "<group>"; };
+		D3A97C611C684D84003B0EB0 /* TMXMPPRosterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPRosterViewCell.m; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterView/TMXMPPRosterViewCell.m; sourceTree = "<group>"; };
+		D3A97C631C684D9F003B0EB0 /* TMXMPPRosterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TMXMPPRosterViewCell.xib; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterView/TMXMPPRosterViewCell.xib; sourceTree = "<group>"; };
+		D3A97C651C685317003B0EB0 /* TMMessageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = TMMessageKit.framework; path = "/Users/terrylmay/Library/Developer/Xcode/DerivedData/TMXMPPClient-ekjixohnjxuppuaafxndfejqijzy/Build/Products/Debug-iphoneos/TMMessageKit.framework"; sourceTree = "<absolute>"; };
 		D3C803901C621D26004A9F80 /* TMXMPPChatListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPChatListener.h; path = Chat/ChatModules/XMPPListener/TMXMPPChatListener.h; sourceTree = "<group>"; };
 		D3C803911C621D26004A9F80 /* TMXMPPChatListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPChatListener.m; path = Chat/ChatModules/XMPPListener/TMXMPPChatListener.m; sourceTree = "<group>"; };
 		D3C803941C621D5A004A9F80 /* TMXMPPPacketFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPPacketFactory.h; path = Chat/ChatModules/XMPPPacketFactory/TMXMPPPacketFactory.h; sourceTree = "<group>"; };
@@ -525,6 +559,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3A97C661C685317003B0EB0 /* TMMessageKit.framework in Frameworks */,
 				D3F09C9D1C5D965C00E08574 /* libresolv.9.tbd in Frameworks */,
 				D3F09C9B1C5D965400E08574 /* libxml2.tbd in Frameworks */,
 				D3F09C861C5D963300E08574 /* libidn.a in Frameworks */,
@@ -548,6 +583,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D334940B1C64C470008A1C5E /* XMPPRosterModules */ = {
+			isa = PBXGroup;
+			children = (
+				D3A97C5F1C684D56003B0EB0 /* XMPPRosterView */,
+				D3A97C4F1C660B96003B0EB0 /* XMPPRosterController */,
+				D33494101C64E476008A1C5E /* RosterModel */,
+				D334940F1C64C4E5008A1C5E /* XMPPRosterDatasource */,
+			);
+			name = XMPPRosterModules;
+			sourceTree = "<group>";
+		};
+		D334940F1C64C4E5008A1C5E /* XMPPRosterDatasource */ = {
+			isa = PBXGroup;
+			children = (
+				D3A97C531C660C26003B0EB0 /* TMXMPPRosterDatasource.h */,
+				D3A97C541C660C26003B0EB0 /* TMXMPPRosterDatasource.m */,
+			);
+			name = XMPPRosterDatasource;
+			sourceTree = "<group>";
+		};
+		D33494101C64E476008A1C5E /* RosterModel */ = {
+			isa = PBXGroup;
+			children = (
+				D33494111C64E4A2008A1C5E /* TMRosterModel.h */,
+				D33494121C64E4A2008A1C5E /* TMRosterModel.m */,
+			);
+			name = RosterModel;
+			sourceTree = "<group>";
+		};
+		D3A97C4F1C660B96003B0EB0 /* XMPPRosterController */ = {
+			isa = PBXGroup;
+			children = (
+				D3A97C501C660BFB003B0EB0 /* TMXMPPRosterController.h */,
+				D3A97C511C660BFB003B0EB0 /* TMXMPPRosterController.m */,
+			);
+			name = XMPPRosterController;
+			sourceTree = "<group>";
+		};
+		D3A97C561C67518B003B0EB0 /* ChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D3A97C571C6751BC003B0EB0 /* TMXMPPChatViewController.h */,
+				D3A97C581C6751BC003B0EB0 /* TMXMPPChatViewController.m */,
+			);
+			name = ChatViewController;
+			sourceTree = "<group>";
+		};
+		D3A97C5F1C684D56003B0EB0 /* XMPPRosterView */ = {
+			isa = PBXGroup;
+			children = (
+				D3A97C601C684D84003B0EB0 /* TMXMPPRosterViewCell.h */,
+				D3A97C611C684D84003B0EB0 /* TMXMPPRosterViewCell.m */,
+				D3A97C631C684D9F003B0EB0 /* TMXMPPRosterViewCell.xib */,
+			);
+			name = XMPPRosterView;
+			sourceTree = "<group>";
+		};
 		D3AF9ED51C5F6F4A00CEB54A /* RegisterModules */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +656,8 @@
 		D3C8038B1C62193B004A9F80 /* ChatModules */ = {
 			isa = PBXGroup;
 			children = (
+				D3A97C561C67518B003B0EB0 /* ChatViewController */,
+				D334940B1C64C470008A1C5E /* XMPPRosterModules */,
 				D3C803931C621D31004A9F80 /* XMPPPacketFactory */,
 				D3C8038F1C621CF8004A9F80 /* XMPPListener */,
 			);
@@ -591,6 +685,7 @@
 		D3F09A5A1C5D956200E08574 = {
 			isa = PBXGroup;
 			children = (
+				D3A97C651C685317003B0EB0 /* TMMessageKit.framework */,
 				D3F09A651C5D956200E08574 /* TMXMPPClient */,
 				D3F09A7F1C5D956200E08574 /* TMXMPPClientTests */,
 				D3F09A8A1C5D956200E08574 /* TMXMPPClientUITests */,
@@ -1588,6 +1683,7 @@
 				D3F09A5F1C5D956200E08574 /* Sources */,
 				D3F09A601C5D956200E08574 /* Frameworks */,
 				D3F09A611C5D956200E08574 /* Resources */,
+				D3A97C5D1C6751E7003B0EB0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1692,6 +1788,7 @@
 				D3F09A731C5D956200E08574 /* Assets.xcassets in Resources */,
 				D3F09A711C5D956200E08574 /* Main.storyboard in Resources */,
 				D3F09CA51C5D978200E08574 /* TMLoginViewController.xib in Resources */,
+				D3A97C641C684D9F003B0EB0 /* TMXMPPRosterViewCell.xib in Resources */,
 				D3F09C801C5D963300E08574 /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1726,6 +1823,7 @@
 				D3F09C471C5D963300E08574 /* XMPPvCardTempTel.m in Sources */,
 				D3F09C8F1C5D963300E08574 /* XMPPModule.m in Sources */,
 				D3F09C0F1C5D963300E08574 /* XMPPDeprecatedPlainAuthentication.m in Sources */,
+				D3A97C621C684D84003B0EB0 /* TMXMPPRosterViewCell.m in Sources */,
 				D3F09C6D1C5D963300E08574 /* NSXMLElement+XEP_0203.m in Sources */,
 				D3F09C8B1C5D963300E08574 /* XMPPElement.m in Sources */,
 				D3F09C7A1C5D963300E08574 /* DDFileLogger.m in Sources */,
@@ -1738,6 +1836,7 @@
 				D3F09C5F1C5D963300E08574 /* XMPPMessageArchiving.m in Sources */,
 				D3F09C1B1C5D963300E08574 /* XMPPProcessOne.m in Sources */,
 				D3F09C351C5D963300E08574 /* XMPPRoomMemoryStorage.m in Sources */,
+				D3A97C551C660C27003B0EB0 /* TMXMPPRosterDatasource.m in Sources */,
 				D3F09C231C5D963300E08574 /* XMPPRosterMemoryStorage.m in Sources */,
 				D3F09C961C5D963300E08574 /* XMPPIDTracker.m in Sources */,
 				D3F09C7B1C5D963300E08574 /* DDLog.m in Sources */,
@@ -1792,6 +1891,7 @@
 				D3F09C3E1C5D963300E08574 /* XMPPvCardCoreDataStorageObject.m in Sources */,
 				D3F09C921C5D963300E08574 /* XMPPStream.m in Sources */,
 				D3F09C891C5D963300E08574 /* NSXMLElement+XMPP.m in Sources */,
+				D3A97C591C6751BC003B0EB0 /* TMXMPPChatViewController.m in Sources */,
 				D3F09C101C5D963300E08574 /* XMPPDigestMD5Authentication.m in Sources */,
 				D3F09C381C5D963300E08574 /* XMPPMessage+XEP0045.m in Sources */,
 				D3F09C211C5D963300E08574 /* XMPPUserCoreDataStorageObject.m in Sources */,
@@ -1804,6 +1904,7 @@
 				D3F09C6E1C5D963300E08574 /* XEP_0223.m in Sources */,
 				D3F09C6B1C5D963300E08574 /* XMPPAutoTime.m in Sources */,
 				D3F09C4D1C5D963300E08574 /* XMPPIQ+XEP_0066.m in Sources */,
+				D3A97C521C660BFB003B0EB0 /* TMXMPPRosterController.m in Sources */,
 				D3F09C261C5D963300E08574 /* XMPPSystemInputActivityMonitor.m in Sources */,
 				D3F09C281C5D963300E08574 /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				D3F09C8D1C5D963300E08574 /* XMPPJID.m in Sources */,
@@ -1811,6 +1912,7 @@
 				D3F09C6A1C5D963300E08574 /* XMPPPing.m in Sources */,
 				D3F09C621C5D963300E08574 /* XMPPPresence+XEP_0172.m in Sources */,
 				D3F09C651C5D963300E08574 /* XMPPBlocking.m in Sources */,
+				D33494131C64E4A2008A1C5E /* TMRosterModel.m in Sources */,
 				D3F09C341C5D963300E08574 /* XMPPRoomOccupantHybridMemoryStorageObject.m in Sources */,
 				D3F09C131C5D963300E08574 /* XMPPXFacebookPlatformAuthentication.m in Sources */,
 				D3F09C301C5D963300E08574 /* XMPPRoomOccupantCoreDataStorageObject.m in Sources */,

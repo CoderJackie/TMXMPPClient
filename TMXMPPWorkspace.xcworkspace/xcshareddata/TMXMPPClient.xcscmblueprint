@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9F0387F72CE56D4D73995C555038868E436AA971",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9F0387F72CE56D4D73995C555038868E436AA971" : 0,
+    "B21802F604372B57D886F285C05C429D4E3DE62C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FA42F16C-235D-4F43-8E66-EBDE8675D2ED",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9F0387F72CE56D4D73995C555038868E436AA971" : "TMXMPPClient\/",
+    "B21802F604372B57D886F285C05C429D4E3DE62C" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "TMXMPPClient",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "TMXMPPClient.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TerryLMay\/TMXMPPClient.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9F0387F72CE56D4D73995C555038868E436AA971"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TerryLMay\/terrylmay.github.io.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B21802F604372B57D886F285C05C429D4E3DE62C"
+    }
+  ]
+}
