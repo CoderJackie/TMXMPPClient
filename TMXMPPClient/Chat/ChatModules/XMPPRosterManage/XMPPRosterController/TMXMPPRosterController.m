@@ -63,7 +63,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    TMRosterModel *rosterModel = [self.datasource objectAtIndex:indexPath.row];
     TMXMPPChatViewController *chatController = [[TMXMPPChatViewController alloc] init];
+    chatController.chatWithWho = rosterModel.jidName;
+    
     [self.navigationController pushViewController:chatController animated:YES];
 }
 

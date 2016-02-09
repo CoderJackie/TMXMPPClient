@@ -10,6 +10,13 @@
 
 #import <TMMessageKit/TMMessageKit.h>
 
+//XMPP报文
+#import "XMPPFramework.h"
+
 @interface TMXMPPChatViewController : TMMessageViewController
+
+@property (nonatomic, strong, readonly) XMPPStream *xmppStream;
+
+@property (nonatomic, copy) NSString *chatWithWho;
 
 @end

@@ -10,6 +10,11 @@
 
 @class XMPPStream;
 
+typedef NS_ENUM(NSInteger, TMMessageChatType) {
+    TMMessageChatTypeSingle,
+    TMMessageChatTypeGroup
+};
+
 @interface TMXMPPPacketFactory : NSObject
 
 /**
@@ -25,4 +30,14 @@
  *  @param xmppStream XMPPStreawm
  */
 + (void)sendFetchRosterIQ:(XMPPStream *)xmppStream;
+
+/**
+ *  发送文本消息接口
+ *
+ *  @param xmppStream  XMPPStream
+ *  @param messageText NSString
+ *  @param toJid 消息接收方
+ *  @param chatType 聊天类型
+ */
++ (void)sendTextMessage:(XMPPStream *)xmppStream messageText:(NSString *)messageText toJid:(NSString *)toJid messageChatType:(TMMessageChatType)chatType;
 @end

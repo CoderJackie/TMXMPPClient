@@ -23,7 +23,6 @@
    <query xmlns="jabber:iq:roster"/>
 </iq>
 */
-
 + (void)sendFetchRosterIQ:(XMPPStream *)xmppStream {
     NSXMLElement *query = [NSXMLElement elementWithName:@"query" xmlns:@"jabber:iq:roster"];
     
@@ -31,5 +30,21 @@
     [iq addChild:query];
     
     [xmppStream sendElement:iq];
+}
+
++ (void)sendTextMessage:(XMPPStream *)xmppStream messageText:(NSString *)messageText toJid:(NSString *)toJid messageChatType:(TMMessageChatType)chatType {
+    
+    NSXMLElement *body = [NSXMLElement elementWithName:@"body"];
+    [body setStringValue:messageText];
+    
+    NSXMLElement *message = [NSXMLElement elementWithName:@"message"];
+    NSString *chatTypeFormat = (chatType == TMMessageChatTypeSingle ? @"chat" : @"groupchat");
+    
+    [message addAttributeWithName:@"type" stringValue:chatTypeFormat];
+    
+    [message addAttributeWithName:@"to" stringValue:toJid];
+    [message addChild:body];
+    
+    [xmppStream sendElement:message];
 }
 @end
