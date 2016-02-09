@@ -84,29 +84,25 @@
     //发送XMPP报文给对方
     [TMXMPPPacketFactory sendTextMessage:self.xmppStream messageText:messageText toJid:self.chatWithWhoJid messageChatType:TMMessageChatTypeSingle];
     TMBaseMessageModel *sendMessageModel = [[TMBaseMessageModel alloc] initWithSendId:self.myJid senderName:self.myNickName messageBody:messageText messageType:TMMessageFormatTextType isSendByMe:YES messageDate:[NSDate date]];
-    [self.datasource addObject:sendMessageModel];
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.datasource.count - 1) inSection:0];
-    
-    [self.messageTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-    
-    [self.messageTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
-    [self.messageTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+    [self insertRawAndReloadCellWithModel:sendMessageModel];
 }
 
 
 #pragma mark -- receive new message
 - (void)receiveNewMessageNotification:(NSNotification *)notification {
     TMBaseMessageModel *model = [notification.userInfo objectForKey:@"message"];
-    [self.datasource addObject:model];
-    
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.datasource.count - 1) inSection:0];
+    [self insertRawAndReloadCellWithModel:model];
+}
 
+- (void)insertRawAndReloadCellWithModel:(TMBaseMessageModel *)messageModel {
+    [self.datasource addObject:messageModel];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.datasource.count - 1) inSection:0];
+    
     [self.messageTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     
     [self.messageTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     
     [self.messageTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
-//    NSLog(@"%@", model.senderId);
 }
 @end
