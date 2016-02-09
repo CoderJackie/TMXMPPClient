@@ -8,9 +8,13 @@
 
 #import "TMXMPPChatViewController.h"
 
+//常量定义
 #import "TMXMPPDef.h"
 
+//报文发送功能类
 #import "TMXMPPPacketFactory.h"
+
+//监听报文类
 #import "TMXMPPChatListener.h"
 
 
