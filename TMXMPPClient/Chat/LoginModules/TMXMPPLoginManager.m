@@ -69,6 +69,11 @@
     self.loginXmppStream.hostPort = HOST_PORT;
     
     NSError *connectError = nil;
+    
+    if ([self.loginXmppStream isConnected] || [self.loginXmppStream isConnecting]) {
+        [self.loginXmppStream disconnect];
+    }
+    
     [self.loginXmppStream connectWithTimeout:TIME_OUT error:&connectError];
     
     if (connectError) {

@@ -8,6 +8,8 @@
 
 #import "TMXMPPChatViewController.h"
 
+#import "TMXMPPDef.h"
+
 #import "TMXMPPPacketFactory.h"
 #import "TMXMPPChatListener.h"
 
@@ -49,6 +51,8 @@
     
     self.myJid = self.xmppStream.myJID.full;
     self.myNickName = self.myJidName;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNewMessageNotification:) name:TMNotificationType_ReceiveNewMessage object:nil];
 }
 
 - (void)scrollViewDidScrollToBottom {
@@ -86,9 +90,23 @@
     
     [self.messageTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     
-    [self.messageTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
-    
     [self.messageTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    [self.messageTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
 }
 
+
+#pragma mark -- receive new message
+- (void)receiveNewMessageNotification:(NSNotification *)notification {
+    TMBaseMessageModel *model = [notification.userInfo objectForKey:@"message"];
+    [self.datasource addObject:model];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.datasource.count - 1) inSection:0];
+
+    [self.messageTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    [self.messageTableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    [self.messageTableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+//    NSLog(@"%@", model.senderId);
+}
 @end

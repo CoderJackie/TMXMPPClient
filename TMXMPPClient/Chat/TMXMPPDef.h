@@ -17,8 +17,10 @@
 #define HOST_PORT 5222
 #define CONNECT_IDENTIFIER @"@"
 
-#endif
+#define TMNotificationType_ReceiveNewMessage @"TMNotificationType_ReceiveNewMessage"
 
 #define TIME_OUT 20
+
+#endif
 
 #endif /* TMXMPPDef_h */

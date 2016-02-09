@@ -8,10 +8,18 @@
 
 #import "TMXMPPChatListener.h"
 
+//定义一些常量
+#import "TMXMPPDef.h"
+
 #import "TMXMPPPacketFactory.h"
 
 //内存存储联系人数据
 #import "TMXMPPRosterDatasource.h"
+
+//界面相关类
+#import <TMMessageKit/TMMessageKit.h>
+
+
 
 @interface TMXMPPChatListener ()<XMPPStreamDelegate>
 
@@ -63,7 +71,19 @@
 }
 
 - (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message {
-    
+    NSLog(@"ReceiveMessage:%@", message);
+    if ([message isChatMessage]) {
+        //获取报文中的通信双方
+        NSString *fromJidFormat = [message attributeForName:@"from"].stringValue;
+        XMPPJID *fromJid = [XMPPJID jidWithString:fromJidFormat];
+        
+        NSXMLElement *bodyElement = [message elementForName:@"body"];
+        NSString *body = bodyElement.stringValue;
+        
+        TMBaseMessageModel *model = [[TMBaseMessageModel alloc] initWithSendId:fromJid.user senderName:fromJid.user messageBody:body messageType:TMMessageFormatTextType isSendByMe:NO messageDate:[NSDate date]];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:TMNotificationType_ReceiveNewMessage object:nil userInfo:@{@"message":model}];
+    }
 }
 
 - (void)xmppStream:(XMPPStream *)sender didSendMessage:(XMPPMessage *)message {
