@@ -9,7 +9,7 @@
 #ifndef TMXMPPDef_h
 #define TMXMPPDef_h
 
-#define LocalOpenfire 1
+#define LocalOpenfire 0
 
 #if LocalOpenfire
 
