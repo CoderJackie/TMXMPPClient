@@ -17,10 +17,17 @@
 #define HOST_PORT 5222
 #define CONNECT_IDENTIFIER @"@"
 
+#else
+
+//amazon openfire服务器地址
+#define HOST_NAME @"ec2-52-68-82-92.ap-northeast-1.compute.amazonaws.com"
+#define HOST_PORT 5222
+#define CONNECT_IDENTIFIER @"@"
+
+#endif
+
 #define TMNotificationType_ReceiveNewMessage @"TMNotificationType_ReceiveNewMessage"
 
 #define TIME_OUT 20
-
-#endif
 
 #endif /* TMXMPPDef_h */
