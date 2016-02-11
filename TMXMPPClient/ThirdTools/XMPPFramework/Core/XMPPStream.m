@@ -1947,8 +1947,8 @@ enum XMPPStreamConfig
 		{
 			someAuth = [[XMPPSCRAMSHA1Authentication alloc] initWithStream:self password:password];
 			result = [self authenticate:someAuth error:&err];
-		}
-		else if ([self supportsDigestMD5Authentication])
+		}//注释的原因 是 服务器 MD5认证总是不通过,需要使用明文验证
+		else if (/* DISABLES CODE */ (NO)/*[self supportsDigestMD5Authentication]*/)
 		{
 			someAuth = [[XMPPDigestMD5Authentication alloc] initWithStream:self password:password];
 			result = [self authenticate:someAuth error:&err];

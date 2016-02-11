@@ -1,4 +1,4 @@
-//
+///
 //  XMPPLoginManager.m
 //  TMXMPPClient
 //
