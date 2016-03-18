@@ -19,4 +19,6 @@
 - (NSArray<TMRosterModel *> *)datasource;
 
 - (void)addObject:(TMRosterModel *)object;
+
+- (void)removeAllObject;
 @end

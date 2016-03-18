@@ -80,7 +80,7 @@
         NSXMLElement *bodyElement = [message elementForName:@"body"];
         NSString *body = bodyElement.stringValue;
         
-        TMBaseMessageModel *model = [[TMBaseMessageModel alloc] initWithSendId:fromJid.user senderName:fromJid.user messageBody:body messageType:TMMessageFormatTextType isSendByMe:NO messageDate:[NSDate date]];
+        TMBaseMessageViewModel *model = [[TMBaseMessageViewModel alloc] initWithSendId:fromJid.user senderName:fromJid.user messageBody:body messageType:TMMessageFormatTextType isSendByMe:NO messageDate:[NSDate date]];
         
         [[NSNotificationCenter defaultCenter] postNotificationName:TMNotificationType_ReceiveNewMessage object:nil userInfo:@{@"message":model}];
     }

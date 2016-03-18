@@ -39,4 +39,8 @@
 - (void)addObject:(TMRosterModel *)object {
     [_datasource addObject:object];
 }
+
+- (void)removeAllObject {
+    [_datasource removeAllObjects];
+}
 @end

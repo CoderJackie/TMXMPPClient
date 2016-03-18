@@ -87,7 +87,7 @@
 - (void)sendTextMessage:(NSString *)messageText toJid:(NSString *)toJid messageChatType:(TMMessageChatType)chatType {
     //发送XMPP报文给对方
     [TMXMPPPacketFactory sendTextMessage:self.xmppStream messageText:messageText toJid:self.chatWithWhoJid messageChatType:TMMessageChatTypeSingle];
-    TMBaseMessageModel *sendMessageModel = [[TMBaseMessageModel alloc] initWithSendId:self.myJid senderName:self.myNickName messageBody:messageText messageType:TMMessageFormatTextType isSendByMe:YES messageDate:[NSDate date]];
+    TMBaseMessageViewModel *sendMessageModel = [[TMBaseMessageViewModel alloc] initWithSendId:self.myJid senderName:self.myNickName messageBody:messageText messageType:TMMessageFormatTextType isSendByMe:YES messageDate:[NSDate date]];
     
     [self insertRawAndReloadCellWithModel:sendMessageModel];
 }
@@ -95,11 +95,11 @@
 
 #pragma mark -- receive new message
 - (void)receiveNewMessageNotification:(NSNotification *)notification {
-    TMBaseMessageModel *model = [notification.userInfo objectForKey:@"message"];
+    TMBaseMessageViewModel *model = [notification.userInfo objectForKey:@"message"];
     [self insertRawAndReloadCellWithModel:model];
 }
 
-- (void)insertRawAndReloadCellWithModel:(TMBaseMessageModel *)messageModel {
+- (void)insertRawAndReloadCellWithModel:(TMBaseMessageViewModel *)messageModel {
     [self.datasource addObject:messageModel];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:(self.datasource.count - 1) inSection:0];
     

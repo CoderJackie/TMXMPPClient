@@ -20,7 +20,7 @@
 #else
 
 //amazon openfire服务器地址
-#define HOST_NAME @"ec2-52-68-82-92.ap-northeast-1.compute.amazonaws.com"
+#define HOST_NAME @"52.193.22.88"
 #define HOST_PORT 5222
 #define CONNECT_IDENTIFIER @"@"
 

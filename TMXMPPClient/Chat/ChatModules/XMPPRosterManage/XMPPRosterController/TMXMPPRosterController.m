@@ -33,6 +33,7 @@
 }
 
 - (void)dealloc {
+    [[TMXMPPRosterDatasource sharedInstance] removeAllObject];
     NSLog(@"%s method called", __func__);
 }
 

@@ -10,14 +10,14 @@
 		D30AE07C1C5F6FDF00A5B077 /* TMRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30AE07B1C5F6FDF00A5B077 /* TMRegisterViewController.m */; };
 		D30AE07E1C5F6FF800A5B077 /* TMRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D30AE07D1C5F6FF800A5B077 /* TMRegisterViewController.xib */; };
 		D30AE0811C5F85A000A5B077 /* TMXMPPRegisteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D30AE0801C5F85A000A5B077 /* TMXMPPRegisteManager.m */; };
+		D3130E441C6C493B0073BEF6 /* TMMessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3130E431C6C493B0073BEF6 /* TMMessageKit.framework */; };
+		D3130E451C6C493B0073BEF6 /* TMMessageKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3130E431C6C493B0073BEF6 /* TMMessageKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D33494131C64E4A2008A1C5E /* TMRosterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D33494121C64E4A2008A1C5E /* TMRosterModel.m */; };
 		D3A97C521C660BFB003B0EB0 /* TMXMPPRosterController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A97C511C660BFB003B0EB0 /* TMXMPPRosterController.m */; };
 		D3A97C551C660C27003B0EB0 /* TMXMPPRosterDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A97C541C660C26003B0EB0 /* TMXMPPRosterDatasource.m */; };
 		D3A97C591C6751BC003B0EB0 /* TMXMPPChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A97C581C6751BC003B0EB0 /* TMXMPPChatViewController.m */; };
 		D3A97C621C684D84003B0EB0 /* TMXMPPRosterViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A97C611C684D84003B0EB0 /* TMXMPPRosterViewCell.m */; };
 		D3A97C641C684D9F003B0EB0 /* TMXMPPRosterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A97C631C684D9F003B0EB0 /* TMXMPPRosterViewCell.xib */; };
-		D3A97C661C685317003B0EB0 /* TMMessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A97C651C685317003B0EB0 /* TMMessageKit.framework */; };
-		D3A97C671C685317003B0EB0 /* TMMessageKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3A97C651C685317003B0EB0 /* TMMessageKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3C803921C621D26004A9F80 /* TMXMPPChatListener.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C803911C621D26004A9F80 /* TMXMPPChatListener.m */; };
 		D3C803961C621D5A004A9F80 /* TMXMPPPacketFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = D3C803951C621D5A004A9F80 /* TMXMPPPacketFactory.m */; };
 		D3F09A681C5D956200E08574 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F09A671C5D956200E08574 /* main.m */; };
@@ -202,7 +202,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D3A97C671C685317003B0EB0 /* TMMessageKit.framework in Embed Frameworks */,
+				D3130E451C6C493B0073BEF6 /* TMMessageKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +217,7 @@
 		D30AE0801C5F85A000A5B077 /* TMXMPPRegisteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPRegisteManager.m; path = Chat/LoginModules/ResigterModules/TMXMPPRegisteManager.m; sourceTree = "<group>"; };
 		D30AE0821C5F86C000A5B077 /* TMXMPPDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMXMPPDef.h; path = Chat/TMXMPPDef.h; sourceTree = "<group>"; };
 		D30AE0831C5F882C00A5B077 /* TMXMPPRegisteDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TMXMPPRegisteDelegate.h; path = Chat/LoginModules/ResigterModules/TMXMPPRegisteDelegate.h; sourceTree = "<group>"; };
+		D3130E431C6C493B0073BEF6 /* TMMessageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = TMMessageKit.framework; path = "/Users/terrylmay/Library/Developer/Xcode/DerivedData/TMXMPPWorkspace-aohommyrssyjonezqyquhaupcjww/Build/Products/Debug-iphoneos/TMMessageKit.framework"; sourceTree = "<absolute>"; };
 		D33494111C64E4A2008A1C5E /* TMRosterModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMRosterModel.h; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterModel/TMRosterModel.h; sourceTree = "<group>"; };
 		D33494121C64E4A2008A1C5E /* TMRosterModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMRosterModel.m; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterModel/TMRosterModel.m; sourceTree = "<group>"; };
 		D3A97C501C660BFB003B0EB0 /* TMXMPPRosterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPRosterController.h; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterController/TMXMPPRosterController.h; sourceTree = "<group>"; };
@@ -228,7 +229,6 @@
 		D3A97C601C684D84003B0EB0 /* TMXMPPRosterViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPRosterViewCell.h; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterView/TMXMPPRosterViewCell.h; sourceTree = "<group>"; };
 		D3A97C611C684D84003B0EB0 /* TMXMPPRosterViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPRosterViewCell.m; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterView/TMXMPPRosterViewCell.m; sourceTree = "<group>"; };
 		D3A97C631C684D9F003B0EB0 /* TMXMPPRosterViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TMXMPPRosterViewCell.xib; path = Chat/ChatModules/XMPPRosterManage/XMPPRosterView/TMXMPPRosterViewCell.xib; sourceTree = "<group>"; };
-		D3A97C651C685317003B0EB0 /* TMMessageKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = TMMessageKit.framework; path = "/Users/terrylmay/Library/Developer/Xcode/DerivedData/TMXMPPClient-ekjixohnjxuppuaafxndfejqijzy/Build/Products/Debug-iphoneos/TMMessageKit.framework"; sourceTree = "<absolute>"; };
 		D3C803901C621D26004A9F80 /* TMXMPPChatListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPChatListener.h; path = Chat/ChatModules/XMPPListener/TMXMPPChatListener.h; sourceTree = "<group>"; };
 		D3C803911C621D26004A9F80 /* TMXMPPChatListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMXMPPChatListener.m; path = Chat/ChatModules/XMPPListener/TMXMPPChatListener.m; sourceTree = "<group>"; };
 		D3C803941C621D5A004A9F80 /* TMXMPPPacketFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMXMPPPacketFactory.h; path = Chat/ChatModules/XMPPPacketFactory/TMXMPPPacketFactory.h; sourceTree = "<group>"; };
@@ -559,7 +559,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3A97C661C685317003B0EB0 /* TMMessageKit.framework in Frameworks */,
+				D3130E441C6C493B0073BEF6 /* TMMessageKit.framework in Frameworks */,
 				D3F09C9D1C5D965C00E08574 /* libresolv.9.tbd in Frameworks */,
 				D3F09C9B1C5D965400E08574 /* libxml2.tbd in Frameworks */,
 				D3F09C861C5D963300E08574 /* libidn.a in Frameworks */,
@@ -685,7 +685,7 @@
 		D3F09A5A1C5D956200E08574 = {
 			isa = PBXGroup;
 			children = (
-				D3A97C651C685317003B0EB0 /* TMMessageKit.framework */,
+				D3130E431C6C493B0073BEF6 /* TMMessageKit.framework */,
 				D3F09A651C5D956200E08574 /* TMXMPPClient */,
 				D3F09A7F1C5D956200E08574 /* TMXMPPClientTests */,
 				D3F09A8A1C5D956200E08574 /* TMXMPPClientUITests */,
